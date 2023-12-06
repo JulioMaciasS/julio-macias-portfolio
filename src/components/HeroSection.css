@@ -1,0 +1,106 @@
+video{
+object-fit: cover;
+width: 100%;
+height: 100%;
+position: fixed;
+z-index: -1;
+
+}
+
+.hero-container{
+    /* background: url('public/images/img-home.jpg') center center/cover no-repeat; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+.skill-container {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-top: 25px;
+  }
+  
+  .skill-item {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjusted box-shadow for a subtle effect */
+    transition: all 0.5s ease-out;
+  }
+
+  .skill-item:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-out;
+  }
+  
+  
+  .skill-icon {
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .skill-text {
+    font-size: 14px;
+    margin-top: 6px;
+    font-weight: bold;
+  }
+  
+  
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 60px;
+    margin-top: 100px;
+    padding: 30px;
+} 
+
+.italic-note {
+    font-style: italic;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.note {
+    font-style: normal;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.aboutme-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* or justify-content: center; depending on your preference */
+    padding: 30px;
+}
+
+
+.profile-picture {
+    /* Adjust the size of the profile picture */
+    width: 250px; /* Adjust to your desired width */
+    height: 250px; /* Adjust to your desired height */
+}
+
+.aboutme-text-container{
+    height: 200px;
+    width: fit-content;
+    background: white;
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 30px;
+}
