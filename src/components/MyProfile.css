@@ -1,0 +1,18 @@
+.about-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    background-image: url("/images/img-2.jpg");
+}
+
+.about-container > h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px; /* Adjusted font size for better aesthetics */
+    margin-top: 100px;
+    padding: 30px;
+}

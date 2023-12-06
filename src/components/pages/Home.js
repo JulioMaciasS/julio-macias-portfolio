@@ -6,7 +6,7 @@ import CardsSection from '../CardsSection';
 function Home () { 
     return(
         <>
-        <HeroSection />
+        <HeroSection/>
         <CardsSection/>
         </>
     );

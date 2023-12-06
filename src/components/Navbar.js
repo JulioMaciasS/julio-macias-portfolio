@@ -48,6 +48,15 @@ window.addEventListener('resize', showButton);
                                 Projects
                             </Link>
                         </li>
+                        <li>
+                        <a
+               href='./Downloads/Resume-Julio-Macias-Gonzalez.pdf' download='Julio Macias Gonzalez - CV/Resume'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Download CV/Resume
+              </a>
+            </li>
                     </ul>
                     </div>
                     {button && <Button buttonStyle='btn--outline'>Download CV/Resume</Button>}
