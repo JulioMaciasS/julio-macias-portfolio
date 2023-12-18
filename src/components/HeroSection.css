@@ -13,66 +13,205 @@ z-index: -1;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
 }
 
-.skill-container {
+.hero-container {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+	--sz: 5px; /*** size ***/
+	--sp: 10s; /*** speed ***/
+	--b1: #3c3532;
+	--b2: #1c1b18;
+	--b3: #0c0b0a;
+	--b4: #0c0b0ae0;
+	--c1: #ffffff;
+	--ts: 50%/calc(var(--sz) * 17.5) calc(var(--sz) * 29.5);
+}
+
+.hero-container {
+	height: 100vh;
+	background:
+		/* black shadows */
+		radial-gradient(circle at 50% 50%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+		radial-gradient(circle at 0% 0%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+		radial-gradient(circle at 0% 100%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+		radial-gradient(circle at 100% 0%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+		radial-gradient(circle at 100% 100%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+		/* border bottom */
+		conic-gradient(from 90deg at 97.5% 67%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts), /*repeated*/
+		conic-gradient(from 90deg at 97.5% 67%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts),
+		conic-gradient(from 182.5deg at 2.5% 67%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts), /*repeated*/
+		conic-gradient(from 182.5deg at 2.5% 67%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts), 
+		/* border top */
+		conic-gradient(from 270deg at 2.5% 33%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts), /*repeated*/
+		conic-gradient(from 270deg at 2.5% 33%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts),
+		conic-gradient(from 2.5deg at 97.5% 33%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts), /*repeated*/
+		conic-gradient(from 2.5deg at 97.5% 33%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts),
+		/* bottom */
+		conic-gradient(from 116.5deg at 50% 85.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+		conic-gradient(from 116.5deg at 50% 85.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+		conic-gradient(from 116.5deg at 50% 85.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts),
+		conic-gradient(from 120deg at 50% 83%, var(--c1) 0 120deg, #fff0 0 100%) var(--ts),
+		/* top */
+		conic-gradient(from -63.5deg at 50% 14.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+		conic-gradient(from -63.5deg at 50% 14.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+		conic-gradient(from -63.5deg at 50% 14.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts),
+		conic-gradient(from -60deg at 50% 17%, var(--c1) 0 120deg, #fff0 0 100%) var(--ts),
+		/* central gradient */
+		conic-gradient(
+			from 0deg at 50% 50%, #fff0 0 2deg, 
+			var(--b2) 2.5deg 57.5deg, 
+			#fff0 58deg 62.5deg, 
+			var(--b1) 63deg 117.5deg, 
+			#fff0 118deg 122.5deg, 
+			var(--b3) 123deg 177.5deg, 
+			#fff0 178deg 182deg, 
+			var(--b2) 182.5deg 237.5deg, 
+			#fff0 0 242.5deg, 
+			var(--b1) 243deg 297.5deg, 
+			#fff0 298deg 302.5deg, 
+			var(--b3) 303deg 357.5deg,
+			#fff0 358deg 360deg
+		) var(--ts),
+		/* bg */
+		var(--c1);
+	animation: colors var(--sp) linear 0s infinite;
+}
+/* 
+@keyframes colors {
+	100% { filter: hue-rotate(360deg); }
+} */
+
+/* https://armaizadenwala.com/ hero container
+.hero {
+    height: 264px;
+    position: relative;
+    background-color: #dee4e8;
+    position: fixed;
+    width: 100%;
+    padding-top: 64px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQMAAAD58POIAAAABlBMVEUAAAB4eHhGvYrXAAAAAXRSTlMAQObYZgAAABxJREFUeAFjGMZgFIyCUWD/ZygLDF8wCkbBKAAAyLQOxRgzjMsAAAAASUVORK5CYII=);
+    background-size: 5px;
+    background-repeat: repeat;
+    background-position: 0 0;
     display: flex;
-    justify-content:flex-start;
     align-items: center;
-    margin-top: 25px;
-  }
-  
-  .skill-item {
-    height: 80px;
-    width: 80px;
-    display: flex;
-    flex-direction: column; /* Align content vertically */
     justify-content: center;
-    align-items: center;
     text-align: center;
-    border-radius: 10px;
-    margin-right: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjusted box-shadow for a subtle effect */
-    transition: all 0.5s ease-out;
-  }
+}
+*/
 
-  .skill-item:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease-out;
-  }
-  
-  
-  .skill-icon {
-    object-fit: contain;
-    width: 40px;
-    height: 40px;
-  }
-  
-  .skill-text {
-    font-size: 14px;
-    margin-top: 6px;
-    font-weight: bold;
-  }
-  
-  
+.text-box {
+background-color: rgb(43, 43, 43);
+display: flex;
+flex-direction: column;
+padding: 30px;
+padding-top: 20px;
+margin-top: 100px;
+/* border-top-right-radius: 20px;
+border-bottom-right-radius: 20px; */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjusted box-shadow for a subtle effect */
+}
 
-.hero-container > h1 {
-  text-align: center;
-    color: #fff;
-    font-size: 60px;
-    margin-top: 100px;
-    padding: 30px;
+.text-box > h1 {
+  color: #fff;
+  font-size: 60px;
+  margin-left: 100px;
 } 
 
-.aboutme-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* or justify-content: center; depending on your preference */
-    padding: 30px;
+.text-box > h2 {
+color: #ffffffda;
+font-size: 36px; /* Adjusted font size for h2 */
+margin-left: 100px;
 }
+
+.bottom-cards-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 100px;
+  padding-bottom: 50px;
+  position: absolute;
+  bottom: 0;
+  width: fit-content;
+
+}
+
+.web-info-text-container {
+  height: 200px;
+  width: 300px;
+  background: rgb(43, 43, 43);
+  border-radius: 20px;
+  padding: 30px;
+  margin-right: 50px; /* Adjust the margin as needed */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Adjusted box-shadow for a subtle effect */
+  transition: all 0.5s ease-out;
+}
+
+.custom-link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+.web-info-text-container:hover{
+  transform: scale(1.1);
+  transition: all 0.5s ease-out;
+}
+
+
+#aboutmelnk {
+  position: relative;
+  isolation: isolate;
+  background: url('/images/profile-pic-2.png') center center/cover no-repeat;
+}
+
+#aboutmelnk::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 20px;
+  background-color: rgba(72, 72, 72, 0.2);
+  backdrop-filter: blur(1.5px)
+  
+ }
+
+#projects {
+  position: relative;
+  isolation: isolate;
+  background: url('/images/img-project.jpg') center center/cover no-repeat;
+}
+
+#projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 20px;
+  background-color: rgba(72, 72, 72, 0.2);
+  backdrop-filter: blur(1.5px)
+ }
+
+
+.web-info-text-container h1 {
+  color: white;
+  text-align: end;
+  margin-top: 100px; /* This will push the text to the bottom */
+}
+
+
+  
+
+
+
+
+
 
 
 .profile-picture {
@@ -81,41 +220,49 @@ z-index: -1;
     height: 250px; /* Adjust to your desired height */
 }
 
-.aboutme-text-container{
-    height: 200px;
-    width: fit-content;
-    background: white;
-    border-radius: 20px;
-    margin-left: 20px;
-    padding: 30px;
-}
+
 
 @media only screen and (max-width: 960px) {
-  .aboutme-section {
-    flex-direction: column; /* Change to column for vertical stacking */
-    height: auto; /* Remove fixed height for dynamic height */
-    overflow-x: auto; /* Disable horizontal scrolling */
+  .text-box {
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    height: max-content;
+    justify-content:center; /* Distribute cards evenly */  
+  }
+
+  .text-box > h1 {
+    color: #fff;
+    font-size: 54x;
+    margin-left: 50px;
+  } 
+  
+  .text-box > h2 {
+  color: #ffffffda;
+  font-size: 30px; /* Adjusted font size for h2 */
+  margin-left: 50px;
+  }
+
+  .web-info-container {
+    flex-direction: column;
+    /* Change to column for vertical stacking */
+    height: auto;
+    /* Remove fixed height for dynamic height */
+    overflow-x: auto;
+    /* Disable horizontal scrolling */
     overflow-y: hidden;
     margin-bottom: 20px;
-  }}
-
-  @media only screen and (max-width: 960px) {
-    .profile-picture {
-padding: 20px;
-    }}
-
-    @media only screen and (max-width: 960px) {
-      .aboutme-text-container {
-  padding: 20px;
-      }}
-
-      @media only screen and (max-width: 960px) {
-        .aboutme-section {
     padding: 15px;
-        }}
+  }
 
-        @media only screen and (max-width: 960px) {
-          .hero-container > h1 {
-            margin-top: 15px;
-          }
-        }
+  .profile-picture {
+    padding: 20px;
+  }
+
+  .web-info-text-container {
+    padding: 20px;
+  }
+
+  .hero-container>h1 {
+    margin-top: 15px;
+  }
+}
+

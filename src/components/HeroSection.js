@@ -4,66 +4,62 @@ import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 import CardsSection from './CardsSection';
+import { Link } from 'react-router-dom';
 
 
 
 export default function HeroSection() {
- // Use useRef to create a reference to the video element
+  // Use useRef to create a reference to the video element
 
-var reactIconLink = '/images/logos/react.png';
-var HTMLIconLink = '/images/logos/html.png';
-var JavaScriptIconLink = '/images/logos/javascript.png';
-var CSSIconLink = '/images/logos/css.png';
 
- useEffect(() => {
-   // Access the video element using the useRef reference
-   const vid = document.getElementById('backgroundVideo')
-
-   if (vid) {
-     // Set the playback rate to control the speed (1 is normal speed)
-     vid.playbackRate = 0.75; // Adjust the value as needed
-   }
- }, []); // Empty dependency array ensures this effect runs once after the initial render
-
+  /*
+   useEffect(() => {
+     // Access the video element using the useRef reference
+     const vid = document.getElementById('backgroundVideo')
+  
+     if (vid) {
+       // Set the playback rate to control the speed (1 is normal speed)
+       vid.playbackRate = 0.75; // Adjust the value as needed
+     }
+   }, []); // Empty dependency array ensures this effect runs once after the initial render
+  */
   return (
     <div className='hero-container'>
-      <video src='/videos/video-2.mp4' id='backgroundVideo' autoPlay loop muted>
-      </video>
-      <h1>Hello, my name is Julio, and this is my Web Portfolio!</h1>
+      {/* <video src='/videos/video-2.mp4' id='backgroundVideo' autoPlay loop muted>
+      </video> */}
+      <div className='text-box'>
+        <h1>I'm Julio. Welcome to my portfolio!</h1>
+        <h2>I'm an aspiring software engineer that chases problems and pursues solutions</h2>
+      </div>
       {/* <p className='italic-note'>
         Please hire me, this website is amazing! <span className='note'>ฅ^._.^ฅ</span>
       </p> */}
-      <div className='aboutme-section'>
-        <img src='/images/profile-pic.png' alt='profile' class="profile-picture" />
-        <div className='aboutme-text-container'>
-          <p>
-            This website has been developed using the following technologies:
-          </p>
-          <div class="skill-container">
-            <div class="skill-item">
-              <img src={reactIconLink} alt="React Icon" className="skill-icon" />
-              <p className="skill-text">React</p>
+      {/* <img src='/images/profile-pic.png' alt='profile' class="profile-picture" /> */}
+      <div>
+                  {/*Card containing About me hyperlink*/}
+        <div className='bottom-cards-container'>
+          <Link to='/about-me' className='custom-link'>
+            <div className='web-info-text-container' id='aboutmelnk'>
+              <h1>
+                About me
+              </h1>
             </div>
-            <div class="skill-item">
-              <img src={HTMLIconLink} alt="HTML Icon" className="skill-icon" />
-              <p className="skill-text">HTML</p>
+          </Link>
+          {/*Card containing Projects hyperlink*/}
+          <Link to='/projects' className='custom-link'>
+            <div className='web-info-text-container' id='projects'>
+              <h1>
+                Projects
+              </h1>
             </div>
-            <div class="skill-item">
-              <img src={JavaScriptIconLink} alt="JavaScript Icon" className="skill-icon" />
-              <p className="skill-text">JavaScript</p>
-            </div>
-            <div class="skill-item">
-              <img src={CSSIconLink} alt="CSS Icon" className="skill-icon" />
-              <p className="skill-text">CSS</p>
-            </div>
-          </div>
-
+          </Link>
         </div>
       </div>
-
     </div>
 
-    
+
+
+
 
 
 
