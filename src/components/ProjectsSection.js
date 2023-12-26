@@ -7,8 +7,8 @@ function ProjectsSection() {
     return (
         <div>
             <div className='project-container'>
-                <div className='projectCardsContainer'>
-                    <h1 id='top'>
+                <div className='project-cards-container'>
+                    <h1 id='title'>
                         My Projects
                     </h1>
                     <ProjectCards/>

@@ -7,8 +7,8 @@ function MyProfile() {
     <div>
       <div className='about-container'>
 
-        <div className='textsContainer'>
-
+        <div className='white-container'>
+          <div className='texts-container'>
         <h1 id = 'top'>About me</h1>
 
         <section>
@@ -40,6 +40,7 @@ function MyProfile() {
 <h2>Working Experience</h2>
 <p>I gained experience working in a summer office job in 2019 and worked as a waiter in the summer of 2023. Currently, I am serving as a catering and floor assistant at Spar in Queen’s University Belfast, an ongoing position.</p>
         </section>
+      </div>
       </div>
       </div>
     </div>

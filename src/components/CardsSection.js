@@ -15,27 +15,25 @@ export default function CardsSection() {
  >
         </LinkCard>
         <LinkCard
- imageURL='/images/img-9.jpg'
+ imageURL='/images/covers/microt-cover-img.png'
  title='How to implement iOS microtransactions for beginners'   
  hrefLink='https://juliotabj.wixsite.com/juliotechguides/post/how-to-implement-ios-microtransactions-for-beginners'    
  >
         </LinkCard>
         <LinkCard
- imageURL='/images/img-9.jpg'
+ imageURL='https://static.wixstatic.com/media/49c0f2_b2b5bcb82f2b4fdb800252bb2c02a552~mv2.png/v1/fill/w_1351,h_845,al_c,q_90,enc_auto/49c0f2_b2b5bcb82f2b4fdb800252bb2c02a552~mv2.png'
  title='How to easily implement an AdMob banner ad'   
  hrefLink='https://juliotabj.wixsite.com/juliotechguides/post/how-to-implement-admob-ads-swiftui'    
  >
         </LinkCard>
         <LinkCard
  imageURL='/images/img-9.jpg'
- title='Card4'   
- hrefLink='https://juliotabj.wixsite.com/juliotechguides'    
+ title='Card Sample'   
  >
         </LinkCard>
         <LinkCard
  imageURL='/images/img-9.jpg'
- title='Card5'   
- hrefLink='https://juliotabj.wixsite.com/juliotechguides'    
+ title='Card Sample'   
  >
         </LinkCard>
     </div>

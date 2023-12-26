@@ -3,7 +3,7 @@ import "./LinkCard.css";
 
 export default function LinkCard({ imageURL, title, hrefLink }) {
   return (
-    <a className='custom-link' href='https://juliotabj.wixsite.com/juliotechguides' target='_blank' rel="noopener noreferrer">
+    <a className='custom-link' href={hrefLink} target='_blank' rel="noopener noreferrer">
     <div className='LinkCard-container'>
         <img className='LinkCard-image' src={imageURL} alt='Link Card'></img>
         <div className='text-container'>

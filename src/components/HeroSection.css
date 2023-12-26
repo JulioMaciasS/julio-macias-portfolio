@@ -229,38 +229,50 @@ margin-left: 100px;
     justify-content:center; /* Distribute cards evenly */  
   }
 
+.hero-container{
+  height: fit-content;
+}
+
+.text-box{
+  margin-top:50px;
+}
   .bottom-cards-container{
   flex-direction: column;
   align-items:center;
+  position: relative;
+  width: 100%;
+  padding: 50px;
   }
 
   .custom-link{
     margin-top: 20px;
   }
 
+
+
   .text-box > h1 {
     color: #fff;
-    font-size: 54x;
+    font-size: 36px;
     margin-left: 50px;
   } 
   
   .text-box > h2 {
   color: #ffffffda;
-  font-size: 30px; /* Adjusted font size for h2 */
+  font-size: 24px; /* Adjusted font size for h2 */
   margin-left: 50px;
   }
 
-  .web-info-container {
+  .web-info-text-container {
     flex-direction: column;
-    /* Change to column for vertical stacking */
     height: auto;
-    /* Remove fixed height for dynamic height */
     overflow-x: auto;
-    /* Disable horizontal scrolling */
     overflow-y: hidden;
     margin-bottom: 20px;
     padding: 15px;
+    justify-content: center;
+    margin-right: auto;
   }
+
 
   .profile-picture {
     padding: 20px;

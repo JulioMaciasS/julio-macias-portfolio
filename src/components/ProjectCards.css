@@ -31,12 +31,19 @@
     /* Apply border-radius to the image */
 }
 
+.proj-skill-container {
+    display: flex;
+    flex-direction: row;
+justify-content: center;
+    margin-top: 25px;
+  }
+
 .proj-text-container {
     background-color: rgb(255, 255, 255);
     height: 300px;
     width: 600px;
     border-bottom-right-radius: 25px;
-    display: flex;
+    display: flex-start;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -48,7 +55,9 @@
     font-size: 40px;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
     /* Center the text */
 }
 
@@ -56,10 +65,10 @@
     margin-top: 10px;
     /* Add some spacing between the image and the title */
     font-size: 16px;
-    font-weight: normal;
     color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 5px;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
     /* Center the text */
 }
 
@@ -67,4 +76,55 @@
     color: inherit;
     text-decoration: none;
     transition: all 0.5s ease-out;
+}
+
+.proj-skill-item {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjusted box-shadow for a subtle effect */
+    transition: all 0.5s ease-out;
+  }
+
+  .proj-skill-item:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-out;
+  } 
+
+  #q-mark-icon{
+    border-radius: 10px;
+  }
+
+  @media only screen and (max-width: 960px) {
+
+
+    .proj-card-container {
+		flex-direction: column;
+		align-items: center;
+        padding: 10%;
+        padding-bottom: 50%;
+        margin-top: 150px;
+	}
+
+    .proj-card-image {
+    width: 60vh;
+    height: 300px;
+    }
+
+    .proj-text-container {
+    width: 60vh;
+    height: 620px;    
+}
+
+.proj-skill-container{
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
 }
