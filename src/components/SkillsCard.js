@@ -2,12 +2,15 @@ import React from 'react';
 import './SkillsCard.css';
 
 function SkillsCard() {
+
     var reactIconLink = '/images/logos/react.png';
     var HTMLIconLink = '/images/logos/html.png';
     var JavaScriptIconLink = '/images/logos/javascript.png';
     var CSSIconLink = '/images/logos/css.png';
+
     return (
         <div className='web-info-text-container-dark'>
+
             <p className='skill-text-title'>
                 Website developed using the following technologies:
             </p>
@@ -29,6 +32,7 @@ function SkillsCard() {
                     <p className="skill-text">CSS</p>
                 </div>
             </div>
+            
         </div>
     )
 }

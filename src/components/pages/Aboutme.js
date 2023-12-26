@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import MyProfile from '../MyProfile';
+import Footer from '../Footer'
 
 /*
 Some of the sections to include are:
@@ -14,6 +15,7 @@ function Aboutme () {
     return(
         <>
 <MyProfile/>
+<Footer/>
         </>
     );
 }

@@ -16,14 +16,14 @@ export default function CardsSection() {
         </LinkCard>
         <LinkCard
  imageURL='/images/img-9.jpg'
- title='Card2'   
- hrefLink='https://juliotabj.wixsite.com/juliotechguides'    
+ title='How to implement iOS microtransactions for beginners'   
+ hrefLink='https://juliotabj.wixsite.com/juliotechguides/post/how-to-implement-ios-microtransactions-for-beginners'    
  >
         </LinkCard>
         <LinkCard
  imageURL='/images/img-9.jpg'
- title='Card3'   
- hrefLink='https://juliotabj.wixsite.com/juliotechguides'    
+ title='How to easily implement an AdMob banner ad'   
+ hrefLink='https://juliotabj.wixsite.com/juliotechguides/post/how-to-implement-admob-ads-swiftui'    
  >
         </LinkCard>
         <LinkCard

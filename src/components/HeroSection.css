@@ -139,8 +139,8 @@ margin-left: 100px;
   position: absolute;
   bottom: 0;
   width: fit-content;
-
 }
+
 
 .web-info-text-container {
   height: 200px;
@@ -227,6 +227,15 @@ margin-left: 100px;
     flex-wrap: wrap; /* Allow cards to wrap onto the next line */
     height: max-content;
     justify-content:center; /* Distribute cards evenly */  
+  }
+
+  .bottom-cards-container{
+  flex-direction: column;
+  align-items:center;
+  }
+
+  .custom-link{
+    margin-top: 20px;
   }
 
   .text-box > h1 {

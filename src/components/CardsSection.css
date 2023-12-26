@@ -9,7 +9,7 @@ justify-content: center;
 margin: auto; /* Centered the container with auto margins */
 overflow: hidden; /* Ensured content overflow is hidden */
 text-align: center;
-
+transform: scale(1);
 }
 
 .cards-container {
